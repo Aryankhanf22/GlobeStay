@@ -12,6 +12,7 @@ main().then((res)=>{
 })
 const insert= async ()=>{
 await listing.deleteMany({})
+simplelisting.data=simplelisting.data.map((obj) =>({...obj , owner:"694aac04be7bc7f351beb83d"}))
 await listing.insertMany(simplelisting.data)
 console.log("data saved")
 }
